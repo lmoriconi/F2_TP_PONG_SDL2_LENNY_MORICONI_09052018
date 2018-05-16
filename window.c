@@ -57,7 +57,6 @@ void drawPaddle(game *myGame, coordonnees *dep, coordonnees *dep2, coordonnees *
     //update le rendu
 
     SDL_SetRenderDrawColor(myGame->g_pRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
-    SDL_RenderPresent(myGame->g_pRenderer);
 }
 
 void drawBorder(game *myGame){
@@ -95,7 +94,6 @@ void drawBorder(game *myGame){
     //update renderer
 
     SDL_SetRenderDrawColor(myGame->g_pRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
-    SDL_RenderPresent(myGame->g_pRenderer);
 }
 
 void drawBall(game *myGame, coordonnees *dep3){
@@ -116,20 +114,19 @@ void drawBall(game *myGame, coordonnees *dep3){
     //update renderer
 
     SDL_SetRenderDrawColor(myGame->g_pRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
-    SDL_RenderPresent(myGame->g_pRenderer);
 
 }
 
 void displayScore(game *myGame, int *cptPts, int *cptPts2){
 //BUT : Init rectangles' values and call drawing method to display the score
-    
+
     int i = 0;
-    
+
     //variables pour placer le score à l'écran
-    int div = 0;                                                             
+    int div = 0;
     int dif = 0;
     int dif2 = 0;
-    int multi = 0;                                                           
+    int multi = 0;
 
     for(i=0; i<NB_SCORE; i++){
 
@@ -292,7 +289,6 @@ void drawScore(game *myGame, SDL_Rect *bar, SDL_Rect *bar2, SDL_Rect *bar3, SDL_
     //update renderer
 
     SDL_SetRenderDrawColor(myGame->g_pRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
-    SDL_RenderPresent(myGame->g_pRenderer);
 
 }
 
@@ -457,9 +453,7 @@ void handleEvents(gameState *state, coordonnees *dep, coordonnees *dep2){
                                     break;
                             }break;
 
-            case SDL_KEYUP : ; break;
-
-            default : break;
+            case SDL_KEYUP : default : break;
         }
     }
 }

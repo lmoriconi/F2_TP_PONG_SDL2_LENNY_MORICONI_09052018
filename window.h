@@ -16,8 +16,8 @@
 #define BORDER_SIZE 30
 #define MARGIN 50
 #define Y_MAX 300
-#define BALL_SPEED 30
-#define PADDLE_SPEED 40
+#define BALL_SPEED 5
+#define PADDLE_SPEED 20
 #define NB_SPAWN 2
 #define SCORE_WIDTH 80
 #define SCORE_HEIGHT 20
